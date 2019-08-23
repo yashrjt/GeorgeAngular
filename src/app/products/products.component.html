@@ -1,0 +1,28 @@
+<button (click)="getMusic()">Get Music Detail</button>
+
+<button (click)="getImage()">Get Image</button>
+
+<button (click)="getPosts()">Get Posts</button>
+
+<button (click)="postForm()">Post Form</button>
+<img class="image" [src]="imageUrl" alt="">
+<ul *ngFor="let item of dogBreeddsList">
+    <li>{{item}}</li>
+</ul>
+
+<table *ngIf="!!postsData">
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Id</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of postsData">
+        <tr>
+          <td>{{item.id}}</td>
+          <td>{{item.userId}}</td>
+          <td>{{item.title}}</td>
+        </tr>
+    </tbody>
+</table>

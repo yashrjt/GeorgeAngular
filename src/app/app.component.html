@@ -1,21 +1,65 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
+<!-- <h3>String Interpolation</h3>
+<p>Welcome to Chicago {{name}}!!</p>
+<p>The index value 2 is {{arr[3]}}</p>
+<p>{{3+5}}</p>
+
+<h3>Event Binding</h3>
+<button (click)="getSubmit()">Submit</button>
+
+<h3>Property Binding</h3>
+<input type="text" [value]="trainerName">
+<img [src]="logo" alt="">
+
+<h2>Template reference variables</h2>
+<input type="text" #companyName>
+<button (click)="getCompanyName(companyName.value)">Submit</button>
+
+
+<h2>DEFAULT PIPES</h2>
+<ul *ngFor="let item of trainee;let i=index">
+    <li>{{i}}  {{item.name|uppercase}}, {{item.age}}</li>
+   
+</ul>
+<li>{{1000|currency}}</li>
+<li>{{todaysDate|date}}</li>
+
+<H2> Structural Directives</H2>
+<h2>NG IF</h2>
+<p *ngIf="conditionalText"> Conditionally show me!</p>
+<p *ngIf="arr.length>10">
+  Array length greater than 2!
+</p>
+
+
+<h2>NG FOR</h2>
+<ul *ngFor="let item of trainee;let i=index">
+<li>{{i}}  {{item.name}}, {{item.age}}</li>
 </ul>
 
-<router-outlet></router-outlet>
+
+<h2> Attribute Directives</h2>
+<p [ngClass]="{angularSubject:subject.angular}"> Angular Class</p>
+
+<h2>Lifecycle hooks</h2>
+
+
+ -->
+
+ <nav>
+  <ul class="nav">
+    <li>
+      <a routerLink='/home'>Home</a>
+    </li>
+    <li>
+      <a routerLink='/products'>Products</a>
+    </li>
+    <li>
+      <a routerLink='/gift-cards'>GiftCards</a>
+    </li>
+    <li>
+      <a routerLink='/login'>Login</a>
+    </li>
+  </ul>
+ </nav>
+
+ <router-outlet></router-outlet>
