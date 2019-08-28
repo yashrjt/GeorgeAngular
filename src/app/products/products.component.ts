@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {GetMusicService} from '../services/get-music.service';
-
+import { from } from 'rxjs';
+import {map,filter} from 'rxjs/operators';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -17,23 +18,38 @@ export class ProductsComponent implements OnInit {
     console.log(!!10);
     console.log(!!'yash');
     console.log(!!undefined);
+
+
+//emit ({name: 'Joe', age: 31}, {name: 'Bob', age:25})
+const source = from([{ name: 'Joe', age: 31 }, { name: 'Bob', age: 25 }]);
+console.log("TCL: ProductsComponent -> ngOnInit -> source", source)
+//filter out people with age under 30
+const example = source.pipe(filter(person => person.age >= 30));
+//output: "Over 30: Joe"
+const subscribe = example.subscribe(val => console.log(`Over 30: ${val.name}`));
   }
 
   getMusic(){
     this.music.getMusicDetails().subscribe((res=>{
-      this.result=res['message'];
+      this.result=res;
      console.log("TCL: ProductsComponent -> getMusic -> this.result", this.result)
       for(let i in this.result){
       this.dogBreeddsList.push(i);  
        }
        console.log("TCL: ProductsComponent -> getMusic ->  this.dogBreeddsList",  this.dogBreeddsList)
      
-    }));
+    }),
+    (err)=>{
+    console.log("TCL: ProductsComponent -> getMusic -> err", err)      
+    }
+    
+    
+    );
   }
 
   getImage(){
     this.music.getImage().subscribe((res=>{
-      this.imageUrl=res[0]['url'];
+      this.imageUrl=res;
       console.log("TCL: ProductsComponent -> getImage -> this.imageUrl", this.imageUrl)
     }));
   }
