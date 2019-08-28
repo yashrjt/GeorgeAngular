@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ProductsComponent } from './products/products.component';
-import { GiftcardsComponent } from './giftcards/giftcards.component';
+import { ProductsComponent } from './product/products/products.component';
+import { GiftcardsComponent } from './giftcard/giftcards/giftcards.component';
 import { LoginComponent } from './login/login.component';
 
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {GetMusicService} from '../services/get-music.service';
+import {GetMusicService} from '../../services/get-music.service';
 import { from } from 'rxjs';
 import {map,filter} from 'rxjs/operators';
 @Component({
