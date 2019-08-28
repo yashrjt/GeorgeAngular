@@ -29,30 +29,30 @@ const example = source.pipe(filter(person => person.age >= 30));
 const subscribe = example.subscribe(val => console.log(`Over 30: ${val.name}`));
   }
 
-  getMusic(){
-    this.music.getMusicDetails().subscribe((res=>{
-      this.result=res;
-     console.log("TCL: ProductsComponent -> getMusic -> this.result", this.result)
-      for(let i in this.result){
-      this.dogBreeddsList.push(i);  
-       }
-       console.log("TCL: ProductsComponent -> getMusic ->  this.dogBreeddsList",  this.dogBreeddsList)
+  // getDogsList(){
+  //   this.music.getDogDetails().subscribe((res=>{
+  //     this.result=res;
+  //    console.log("TCL: ProductsComponent -> getMusic -> this.result", this.result)
+  //     for(let i in this.result){
+  //     this.dogBreeddsList.push(i);  
+  //      }
+  //      console.log("TCL: ProductsComponent -> getMusic ->  this.dogBreeddsList",  this.dogBreeddsList)
      
-    }),
-    (err)=>{
-    console.log("TCL: ProductsComponent -> getMusic -> err", err)      
-    }
+  //   }),
+  //   (err)=>{
+  //   console.log("TCL: ProductsComponent -> getMusic -> err", err)      
+  //   }
     
     
-    );
-  }
+  //   );
+  // }
 
-  getImage(){
-    this.music.getImage().subscribe((res=>{
-      this.imageUrl=res;
-      console.log("TCL: ProductsComponent -> getImage -> this.imageUrl", this.imageUrl)
-    }));
-  }
+  // getImage(){
+  //   this.music.getImage().subscribe((res=>{
+  //     this.imageUrl=res;
+  //     console.log("TCL: ProductsComponent -> getImage -> this.imageUrl", this.imageUrl)
+  //   }));
+  // }
 
   getPosts(){
     this.music.getPosts().subscribe(res=>{

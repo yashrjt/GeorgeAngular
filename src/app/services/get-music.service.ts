@@ -12,7 +12,7 @@ export class GetMusicService {
 
   //Rxjs--reactive Javascript
   //$ajax
-  getMusicDetails(){
+  getDogDetails(){
    return this.http.get('https://dog.ceo/api/breeds/list/all').pipe(
       map(res=>{
         return res['message'];

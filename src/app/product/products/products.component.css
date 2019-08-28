@@ -1,4 +1,13 @@
-.image{
-    width:100px;
-    height:100px;
+.panes{
+display: flex;
+justify-content: space-around;
+
+
 }
+
+.right-pane,.left-pane{
+border:solid 2px black;
+}
+
+
+

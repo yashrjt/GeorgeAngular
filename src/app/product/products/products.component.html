@@ -1,16 +1,16 @@
-<button (click)="getMusic()">Get Music Detail</button>
+<!-- <button (click)="getMusic()">Get Music Detail</button>
 
-<button (click)="getImage()">Get Image</button>
+<button (click)="getImage()">Get Image</button> -->
+<!-- <button (click)="getPosts()">Get Posts</button>
 
-<button (click)="getPosts()">Get Posts</button>
+<button (click)="postForm()">Post Form</button> -->
+<!-- <img class="image" [src]="imageUrl" alt="">
 
-<button (click)="postForm()">Post Form</button>
-<img class="image" [src]="imageUrl" alt="">
 <ul *ngFor="let item of dogBreeddsList">
     <li>{{item}}</li>
-</ul>
+</ul> -->
 
-<table *ngIf="!!postsData">
+<!-- <table *ngIf="!!postsData">
     <thead>
         <tr>
             <th>UserId</th>
@@ -25,4 +25,21 @@
           <td>{{item.title}}</td>
         </tr>
     </tbody>
-</table>
+</table> -->
+
+<div class="panes">
+    <div class="left-pane">
+            <nav>
+                    <ul>
+                        <li><a routerLink="catimage">Get Cat Image</a></li>
+                        <li><a routerLink="dogs">Get Dogs</a></li>
+                    </ul>
+                </nav>
+    </div>
+
+<div class="right-pane">
+        <router-outlet></router-outlet>
+</div>
+
+
+</div>
