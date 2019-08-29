@@ -22,7 +22,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    ProductModule,
+    // ProductModule,
     GiftcardModule,
     SharedModule
   ],

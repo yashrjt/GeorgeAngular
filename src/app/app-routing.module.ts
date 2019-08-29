@@ -11,10 +11,11 @@ import { ProductDogsComponent } from './product/product-dogs/product-dogs.compon
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
-  {path:'products',component:ProductsComponent,children:[
-    {path:'catimage',component:ProductImageComponent},
-    {path:'dogs',component:ProductDogsComponent},
-  ]},
+  // {path:'products',component:ProductsComponent,children:[
+  //   {path:'catimage',component:ProductImageComponent},
+  //   {path:'dogs',component:ProductDogsComponent},
+  // ]},
+  {path:'products',loadChildren:'./product/product.module#ProductModule'},
   {path:'gift-cards',component:GiftcardsComponent},
   {path:'login',component:LoginComponent},
   {path:'**',redirectTo:'/home'}
