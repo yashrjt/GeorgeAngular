@@ -10,6 +10,7 @@ import { ProductModule } from './product/product.module';
 import { GiftcardModule } from './giftcard/giftcard.module';
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,15 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
     // ProductModule,
     GiftcardModule,
     SharedModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
