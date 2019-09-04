@@ -85,4 +85,19 @@ export class GetMusicService {
        })
     )
   }
+
+
+  deleteDog(item){
+    return this.http.delete('url/'+item).pipe(
+      map(res=>{
+        console.log("TCL: GetMusicService -> postData -> res", 'item got deleted')
+          
+        }),
+        catchError( (err) =>
+          {
+            return throwError(err);
+         })
+      )
+    
+  }
 }

@@ -4,12 +4,13 @@ import { ProductsComponent } from './products/products.component';
 
 import { ProductImageComponent } from './product-image/product-image.component';
 import { ProductDogsComponent } from './product-dogs/product-dogs.component';
+import {ProductDogsListComponent} from './product-dogs-list/product-dogs-list.component';
 import { RouterModule } from '@angular/router';
-import {ProductRoutingModule} from './product.routing.module'
+import {ProductRoutingModule} from './product.routing.module';
 
 
 @NgModule({
-  declarations: [ProductsComponent,  ProductImageComponent, ProductDogsComponent],
+  declarations: [ProductsComponent,  ProductImageComponent, ProductDogsComponent, ProductDogsListComponent],
   imports: [
     CommonModule,
     RouterModule,

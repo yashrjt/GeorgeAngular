@@ -12,25 +12,28 @@ export class ProductDogsComponent implements OnInit {
    constructor(private music:GetMusicService) { }
 
   ngOnInit() {
-    console.log('dog page inits')
+    //console.log('dog page inits')
     this.getDogsList();
   }
   getDogsList(){
     this.music.getDogDetails().subscribe((res=>{
       this.result=res;
-     console.log("TCL: ProductsComponent -> getMusic -> this.result", this.result)
+    // console.log("TCL: ProductsComponent -> getMusic -> this.result", this.result)
       for(let i in this.result){
       this.dogBreeddsList.push(i);  
        }
-       console.log("TCL: ProductsComponent -> getMusic ->  this.dogBreeddsList",  this.dogBreeddsList)
+     //  console.log("TCL: ProductsComponent -> getMusic ->  this.dogBreeddsList",  this.dogBreeddsList)
      
     }),
     (err)=>{
     console.log("TCL: ProductsComponent -> getMusic -> err", err)      
-    }
-    
-    
+    } 
     );
+  }
+
+  displayItem(item){
+  console.log("TCL: ProductDogsComponent -> displayItem -> $event", item)
+  this.music.deleteDog(item).subscribe();
   }
 
 }

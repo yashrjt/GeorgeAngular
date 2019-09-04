@@ -1,3 +1,6 @@
-<ul *ngFor="let item of dogBreeddsList">
+<!-- <ul *ngFor="let item of dogBreeddsList">
     <li>{{item}}</li>
-</ul>
+</ul> -->
+
+<h3>List of Dogs</h3>
+<app-product-dogs-list [dogList]='dogBreeddsList' (clickDogs)="displayItem($event)"></app-product-dogs-list>
