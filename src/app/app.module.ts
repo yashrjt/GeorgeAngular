@@ -12,11 +12,13 @@ import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+   
   ],
   imports: [
     BrowserModule,

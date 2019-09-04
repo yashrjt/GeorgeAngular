@@ -7,10 +7,11 @@ import { ProductDogsComponent } from './product-dogs/product-dogs.component';
 import {ProductDogsListComponent} from './product-dogs-list/product-dogs-list.component';
 import { RouterModule } from '@angular/router';
 import {ProductRoutingModule} from './product.routing.module';
+import { DogPipe } from './pipes/dog.pipe';
 
 
 @NgModule({
-  declarations: [ProductsComponent,  ProductImageComponent, ProductDogsComponent, ProductDogsListComponent],
+  declarations: [ProductsComponent,  ProductImageComponent, ProductDogsComponent, ProductDogsListComponent,DogPipe],
   imports: [
     CommonModule,
     RouterModule,
