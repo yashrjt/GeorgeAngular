@@ -10,7 +10,12 @@
         <a routerLink='/gift-cards'>GiftCards</a>
       </li>
       <li>
-        <a routerLink='/login'>Login</a>
+        <ng-container *ngIf="!isLoggedIn">
+            <a routerLink='/login'>Login</a>
+        </ng-container>
+        <ng-container *ngIf="isLoggedIn">
+        <a (click)="logOut()">Logout</a>
+      </ng-container>
       </li>
     </ul>
    </nav>

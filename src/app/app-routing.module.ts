@@ -6,7 +6,7 @@ import { GiftcardsComponent } from './giftcard/giftcards/giftcards.component';
 import { LoginComponent } from './login/login.component';
 import { ProductImageComponent } from './product/product-image/product-image.component';
 import { ProductDogsComponent } from './product/product-dogs/product-dogs.component';
-
+import {ProductGuard} from './core/Guards/product.guard';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -15,8 +15,8 @@ const routes: Routes = [
   //   {path:'catimage',component:ProductImageComponent},
   //   {path:'dogs',component:ProductDogsComponent},
   // ]},
-  {path:'products',loadChildren:'./product/product.module#ProductModule'},
-  {path:'gift-cards',component:GiftcardsComponent},
+  {path:'products',loadChildren:'./product/product.module#ProductModule',canActivate:[ProductGuard]},
+  {path:'gift-cards',component:GiftcardsComponent,canActivate:[ProductGuard]},
   {path:'login',component:LoginComponent},
   {path:'**',redirectTo:'/home'}
 ];
